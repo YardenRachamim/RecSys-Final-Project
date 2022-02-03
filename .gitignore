@@ -117,4 +117,5 @@ dmypy.json
 /data
 /doc
 /GRU4REC-pytorch-master
+/src/deprecated
 /.idea
