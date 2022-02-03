@@ -114,7 +114,8 @@ dmypy.json
 .pyre/
 
 
-/models
+/models/*
+!models/readme.*
 /data/*
 !data/readme.*
 /doc
