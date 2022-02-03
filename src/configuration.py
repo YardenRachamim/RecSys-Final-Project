@@ -9,6 +9,7 @@ config['models_path'] = Path(r"C:\Users\Yarden\Computer Science\Masters\2\A\Reco
 config['train_file_name'] = 'recSys15TrainOnly.txt'
 config['test_file_name'] = 'recSys15Valid.txt'
 
+
 config['shared_arguments'] = {
     'batch_size': 50,
     'cuda': True
@@ -39,10 +40,14 @@ config['Optimizer_arguments'] = {
     'eps': 1e-6
 }
 
+config['evaluation'] = {
+    'load_model': "model_00000.pt",
+    'k_eval': 20
+}
+
 config['arguments'] = {
     'n_epochs': 5,
-    'time_sort': False,
-    'k_eval': 20
+    'time_sort': False
 }
 
 config['training'] = {

@@ -2,7 +2,7 @@ import numpy as np
 import torch
 from tqdm import tqdm
 
-from deprecated.dataloaders import GRU4Rec15Loader
+from data.dataloaders import GRU4Rec15Loader
 
 
 class Evaluation(object):
