@@ -17,7 +17,11 @@ model.gru.flatten_parameters()
 loss_function = LossFunction(**config['LossFunction_arguments'])  # cuda is used with cross entropy only
 k = config['evaluation']['k_eval']
 use_cuda = False
+device = torch.device("cuda" if use_cuda and torch.cuda.is_available() else 'cpu')
+model.device = device
 batch_size = config['shared_arguments']['batch_size']
 
 evaluator = Evaluation(model, loss_function, use_cuda, k=k)
 loss, recall, mrr = evaluator.eval(test_dataset, batch_size)
+
+print(loss, recall, mrr)

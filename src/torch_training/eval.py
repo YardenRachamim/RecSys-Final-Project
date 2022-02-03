@@ -23,6 +23,7 @@ class Evaluation(object):
         with torch.no_grad():
             self.model = self.model.to(self.device)
             hidden = self.model.init_hidden()
+            hidden = hidden.to(self.device)
             for ii, (input, target, mask) in tqdm(enumerate(dataloader),
                                                   total=len(dataloader),
                                                   miniters=1000):

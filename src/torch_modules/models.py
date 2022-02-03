@@ -100,6 +100,7 @@ class GRU4REC(nn.Module):
         """
         self.onehot_buffer.zero_()
         index = input.view(-1, 1)
+        self.onehot_buffer = self.onehot_buffer.to(index.device)
         one_hot = self.onehot_buffer.scatter_(1, index, 1)
         return one_hot
 
