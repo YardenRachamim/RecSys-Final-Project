@@ -113,8 +113,10 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
+
 /models
-/data
+/data/*
+!data/readme.*
 /doc
 /GRU4REC-pytorch-master
 /src/deprecated
