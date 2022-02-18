@@ -1,2 +1,3 @@
-This is the config['data_path'] file - here goes the training and testing file after preprocess
-In data/raw_data you put the .dat files from kaggle
+Here gpoes all the data files
+Here you have 2 directories one for each dataset, in each directory you can find a text file contatining 
+a google drive shared link for all the data
