@@ -118,6 +118,7 @@ dmypy.json
 !models/readme.*
 /data/*
 !data/readme.*
+!src/*
 /doc
 /GRU4REC-pytorch-master
 /src/deprecated
