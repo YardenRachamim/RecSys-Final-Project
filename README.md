@@ -90,3 +90,9 @@ List of Arguments accepted (for both GRU4REC and Bi-GRU4REC):
 
 ## Results:
 All the results can be found [here](https://docs.google.com/spreadsheets/d/1wlwuKIeaMwBFY6iebWhtnU_rDA5xmZxO8wUdFyTjI9g/edit?usp=sharing)
+
+## Reproduce
+If one wants to reproduce our model results he can use the notebooks at [exe_notebooks](exe_notebooks).  
+At the [Train_models](exe_notebooks/Train_models.ipynb) you can find the model training execution for each dataset with diffrent arguments.  
+At the [Eval](exe_notebooks/Eval.ipynb) you can find the evalutions of chosen models, whose models can be found in [models](models).  
+At the [Hyper_partmeter_search](exe_notebooks/Hyper_partmeter_search.ipynb) you can find a running example of the hyper-parameters search that been performed.    
