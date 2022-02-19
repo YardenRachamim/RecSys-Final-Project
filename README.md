@@ -5,22 +5,6 @@
 RECURRENT NEURAL NETWORKS](https://arxiv.org/pdf/1511.06939.pdf)) and extension of GRU4REC to a biderectional model (our improvment). 
 * This code is heavily influenced by https://github.com/hungthanhpham94/GRU4REC-pytorch#readme (Pham Thanh Hung and Mohamed Maher)
 
-## Structure
-├── RecSys-Final-Project
-│   ├── model
-│   │    ├── checkpoint_digenetica
-│   │    ├── checkpoint_yoochhose
-│   ├── data
-│   │    ├── digenetica
-│   │    ├── youchoose
-│   ├── src
-|   |   ├──eval.py
-|   |   ├──train.py
-|   |   ├──train_s_pop.py
-|   |   ├──hyperparameters_search.py
-|   |   ├──lib
-|   |   ├──data_preprocess
-
 ## Dataset
 1. **YOUCHOOSE** dataset can be found [here](https://www.kaggle.com/chadgostopp/recsys-challenge-2015)
 2. **DIGINETICA** dataset can be found [here](https://competitions.codalab.org/competitions/11161#learn_the_details-data2)
@@ -80,7 +64,12 @@ List of Arguments accepted (for both GRU4REC and Bi-GRU4REC):
 
 ## Evaluating model
 #### S-POP
-* Is evaluationg while training
+* exe: `python src/train_s_pop.py`   
+* List of Arguments accepted:  
+--data_folder String of the directory to the folder containing the dataset.  
+--train_data Name of the training dataset file (Default = train.txt)  
+--valid_data Name of the validation dataset file (Default = valid.txt)   
+--k_eval Value of K used during Recall@K and MRR@K Evaluation (Default = 20)  
 
 #### GRU4REC + Bi-GRU4REC
 * exe: `python src/eval.py`
@@ -90,3 +79,6 @@ List of Arguments accepted (for both GRU4REC and Bi-GRU4REC):
 --valid_data Name of the validation dataset file (Default = valid.txt)   
 --k_eval Value of K used during Recall@K and MRR@K Evaluation (Default = 20)  
 --load_model The path to the pytorch model we want to evaluate (Default = None)
+
+## Results:
+All the results can be found [here](https://docs.google.com/spreadsheets/d/1wlwuKIeaMwBFY6iebWhtnU_rDA5xmZxO8wUdFyTjI9g/edit?usp=sharing)
