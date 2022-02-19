@@ -10,13 +10,13 @@ from pathlib import Path
 
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--k_eval', default=20, type=int) #value of K durig Recall and MRR Evaluation
-parser.add_argument("-seed", type=int, default=22, help="Seed for random initialization") #Random seed setting
-# parse the loss type
-# etc
+#paths
 parser.add_argument('--data_folder', default='/content/drive/MyDrive/RecSys/FinalProject/data/youchoose', type=str)
 parser.add_argument('--train_data', default='train.txt', type=str)
 parser.add_argument('--valid_data', default='valid.txt', type=str)
+
+parser.add_argument('--k_eval', default=20, type=int) #value of K durig Recall and MRR Evaluation
+parser.add_argument("-seed", type=int, default=22, help="Seed for random initialization") #Random seed setting
 parser.add_argument('--load_model', default=None,  type=str)
 
 # Get the arguments

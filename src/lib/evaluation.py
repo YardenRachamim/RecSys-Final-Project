@@ -16,9 +16,10 @@ class Evaluation(object):
         recalls = []
         mrrs = []
         dataloader = lib.DataLoader(eval_data, batch_size)
+        n_sessions = eval_data.df[eval_data.session_key].nunique()
         with torch.no_grad():
             hidden = self.model.init_hidden()
-            for ii, (input, target, mask) in tqdm(enumerate(dataloader), total=len(dataloader.dataset.df) // dataloader.batch_size, miniters = 1000):
+            for ii, (input, target, mask) in tqdm(enumerate(dataloader), total=(len(dataloader.dataset.df) - n_sessions) // dataloader.batch_size, miniters = 1000):
             #for input, target, mask in dataloader:
                 input = input.to(self.device)
                 target = target.to(self.device)

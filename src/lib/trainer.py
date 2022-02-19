@@ -61,8 +61,8 @@ class Trainer(object):
 
         hidden = self.model.init_hidden()
         dataloader = lib.DataLoader(self.train_data, self.batch_size)
-        #for ii,(data,label) in tqdm(enumerate(train_dataloader),total=len(train_data)):
-        for ii, (input, target, mask) in tqdm(enumerate(dataloader), total=len(dataloader.dataset.df) // dataloader.batch_size, miniters = 1000):
+        n_sessions = self.train_data.df[self.train_data.session_key].nunique()
+        for ii, (input, target, mask) in tqdm(enumerate(dataloader), total=(len(dataloader.dataset.df) - n_sessions) // dataloader.batch_size, miniters = 1000):
             input = input.to(self.device)
             target = target.to(self.device)
             self.optim.zero_grad()
