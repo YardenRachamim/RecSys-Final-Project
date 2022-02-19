@@ -5,6 +5,14 @@
 RECURRENT NEURAL NETWORKS](https://arxiv.org/pdf/1511.06939.pdf)) and extension of GRU4REC to a biderectional model (our improvment). 
 * This code is heavily influenced by https://github.com/hungthanhpham94/GRU4REC-pytorch#readme (Pham Thanh Hung and Mohamed Maher)
 
+## Requirements
+- PyTorch >= 0.4.1
+- Python  >= 3.5
+- pandas
+- numpy  >= 1.14.5
+- swifter (only if running the preprocess scripts)
+
+
 ## Dataset
 1. **YOUCHOOSE** dataset can be found [here](https://www.kaggle.com/chadgostopp/recsys-challenge-2015)
 2. **DIGINETICA** dataset can be found [here](https://competitions.codalab.org/competitions/11161#learn_the_details-data2)
